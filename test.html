@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraction Tests</title>
+</head>
+<body>
+<script src="https://unpkg.com/expect@%3C21/umd/expect.min.js"></script>
+<script src="floating-validator.js"></script>
+<script language="javascript">
+
+    var exp = [
+        ['23', true],
+        ['23.23', true],
+        ['12,34', true],
+        ['-10,12', true],
+        ['0.20', true],
+        ['1200.20', true],
+        ['1200.2033', true],
+        ['1231231312313', false],
+        ['1.1231231231312', false],
+        ['11.23.23', false],
+        ['abc', false],
+        ['12,34,', false],
+        ['12,11,12', false],
+    ];
+
+    exp.forEach(function(test) {
+        var res = isFraction(test[0]);
+        window.expect(res).toBe(test[1], "expected isFraction('" + test[0] + "') to be " + test[1] + ", but was: " + res);
+
+    });
+</script>
+</body>
+</html>
