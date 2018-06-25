@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax button</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<button onclick="load()">Press me</button>
+
+<br>
+
+<textarea readonly rows="20" cols="40" id="json-area"></textarea>
+
+
+<script type="text/javascript">
+    
+    
+    function load() {
+        $.ajax({
+
+            url: "json-file.json",
+            beforeSend: function(xhr){
+                if (xhr.overrideMimeType)
+                {
+                    xhr.overrideMimeType("application/json");
+                }
+            },
+            request: JSON,
+            dataType: 'text',
+            async: true,
+            success: function (data) {
+                var area = document.getElementById("json-area")
+                area.value = data;
+            }
+
+        })
+    }
+    
+</script>
+
+</body>
+</html>
