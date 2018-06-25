@@ -20,7 +20,6 @@ function trySubmit() {
         function (element) {
 
             if(element.tagName == "SPAN" && element.innerHTML != ""){
-                alert("Please fix your errors");
                 hasErrors = true;
             }
         }
