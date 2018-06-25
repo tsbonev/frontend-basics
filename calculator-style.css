@@ -1,0 +1,29 @@
+.calc-wrapper {
+
+    border: 1px solid black;
+    display: table;
+    background-color: #f7b129;
+
+}
+
+.calc-button{
+
+    width: 6em;
+    height: 5em;
+    margin: 0.3em;
+    cursor: pointer;
+
+}
+
+.calc-display {
+    display: table-row;
+    width: 100%;
+    height: 6em;
+}
+
+.calc-display-span{
+    background-color: aliceblue;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}

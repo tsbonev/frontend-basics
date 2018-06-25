@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator-style.css">
+</head>
+<body>
+
+<div class="calc-wrapper">
+
+    <div class="calc-display" id="calc-display">
+
+        <span class="calc-display-span" id="calc-display-span">12 + 2</span>
+
+    </div>
+
+    <div class="calc-body">
+
+        <div class="calc-button-wrapper">
+
+            <button class="calc-button" onclick="addNumber()" value="1">1</button>
+            <button class="calc-button" onclick="addNumber()" value="2">2</button>
+            <button class="calc-button" onclick="addNumber()" value="3">3</button>
+            <br>
+            <button class="calc-button" onclick="addNumber()" value="4">4</button>
+            <button class="calc-button" onclick="addNumber()" value="5">5</button>
+            <button class="calc-button" onclick="addNumber()" value="6">6</button>
+            <br>
+            <button class="calc-button" onclick="addNumber()" value="7">7</button>
+            <button class="calc-button" onclick="addNumber()" value="8">8</button>
+            <button class="calc-button" onclick="addNumber()" value="9">9</button>
+            <br>
+            <button class="calc-button" onclick="addNumber()" value="0">0</button>
+            <button class="calc-button" onclick="addOperator()" value="+">+</button>
+            <button class="calc-button" onclick="addOperator()" value="-">-</button>
+            <br>
+            <button class="calc-button" onclick="addOperator()" value="/">/</button>
+            <button class="calc-button" onclick="addOperator()" value="*">*</button>
+            <button class="calc-button" onclick="calculate()" value="=">=</button>
+
+        </div>
+
+    </div>
+
+    <script src="calculator-js.js"></script>
+
+</div>
+
+</body>
+</html>
