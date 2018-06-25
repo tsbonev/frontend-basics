@@ -14,18 +14,17 @@ var passwordRegex = /^[a-zA-Z0-9]{6,18}$/;
 
 function trySubmit() {
 
-    var children = document.getElementById("form").childNodes;
-
     var hasErrors = false;
 
-    children.forEach(function (element) {
+    document.getElementById("form").childNodes.forEach(
+        function (element) {
 
-        if(element.tagName == "span" && element.innerHTML != ""){
-            console.log(element);
-            this.hasErrors = true;
+            if(element.tagName == "SPAN" && element.innerHTML != ""){
+                alert("Please fix your errors");
+                hasErrors = true;
+            }
         }
-
-    })
+    );
 
     if(hasErrors){
         alert("Please fix your errors");
